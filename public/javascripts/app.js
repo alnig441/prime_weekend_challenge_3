@@ -2,8 +2,10 @@
  * Created by allannielsen on 8/28/15.
  */
 
-
 function getTeamMember(){
+
+    var source = $('#deltaTeam-template').html();
+    var template = Handlebars.compile(source);
 
     $.ajax({
         type: "GET",

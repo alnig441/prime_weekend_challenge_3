@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Prime Weekend Challenge 3</title>
     <script type="text/javascript" src="javascripts/jquery-1.11.3.min.js"></script>
+    <script src="javascripts/handlebars-v3.0.3.js"></script>
     <script type="text/javascript" src="javascripts/app.js"></script>
     <script type="text/javascript" src="javascripts/jQ_app.js"></script>
 </head>
+
 <body>
 <div id="intro">
     Sit back and relax whilst AJAX loads it's stuff!
 </div>
-<ul id="deltaTeam"></ul>
+
+<script id="deltaTeam-template" type="text/x-handlebars-template">
+    <div class="deltaTeam">
+        <table>
+            {{#each deltaCohort}}
+            <tr>
+                <th>{{name}}</th>
+            </tr>
+            <tr>
+                <td>{{shout_out}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+</script>
 
 
 </body>
