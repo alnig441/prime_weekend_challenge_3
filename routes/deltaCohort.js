@@ -3,10 +3,6 @@ var router = express.Router();
 var path = require('path');
 var fs = require('fs');
 
-/* GET home page. */
-//router.get('/', function(req, res, next) {
-//    res.sendFile(path.join(__dirname, '../models/deltaCohort.json'));
-//});
 
 router.get('/:id?', function(req, res, next){
     var id = req.params.id;

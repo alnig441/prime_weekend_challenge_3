@@ -7,8 +7,7 @@ var incr = 0;
 function getTeamMember(){
 
     console.log('in getTeamMember printing out the incrementor ', incr);
-    var source = $('#deltaTeam-template').html();
-    var template = Handlebars.compile(source);
+
 
     $.ajax({
         type: "GET",
@@ -17,7 +16,11 @@ function getTeamMember(){
 
     }).done(function(data){
         console.log('AJAX call succeeded with ',data);
-        $('.deltaTeam').append(template(data));
+        var $h1 = $('<h1>');
+        $h1.text(data.name);
+        var $p1 = $('<p>');
+        $p1.text(data.shoutOut);
+        $('.deltaTeam').html([$h1, $p1]);
 
 
     }).fail(function(jqXHR, textStatus, errorThrown){
@@ -29,8 +32,9 @@ function getTeamMember(){
 
     if(incr==16){
         incr=0;
-    }else{
+    }
+    else{
         incr++;
-        //console.log(incr);
+
     }
 }
