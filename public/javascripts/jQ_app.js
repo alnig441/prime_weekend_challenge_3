@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
-    getTeamMember();
+
+        setInterval(getTeamMember, 5000);
+    //getTeamMember();
 
 });
