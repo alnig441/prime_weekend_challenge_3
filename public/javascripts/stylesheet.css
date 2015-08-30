@@ -1,0 +1,9 @@
+#toggle {
+    width: 300px;
+    height: 100px;
+    background: #ccc;
+}
+
+h2, p {
+    text-align: center;
+}
