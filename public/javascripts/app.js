@@ -16,9 +16,9 @@ function getTeamMember(){
 
     }).done(function(data){
         console.log('AJAX call succeeded with ',data);
-        var $h2 = $('<h2>');
+        var $h2 = $('<h2>', {class: 'cover-heading'});
         $h2.text(data.name);
-        var $p1 = $('<p>');
+        var $p1 = $('<p>', {class: 'lead'});
         $p1.text(data.shoutOut);
         $('.deltaTeam').html([$h2, $p1]);
 
